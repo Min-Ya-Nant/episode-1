@@ -1,0 +1,186 @@
+/* Global Veriable */
+:root {
+    /* typography */
+    --primary-font: "Montserrat", sans-serif;
+    --headline-font: 'Source Serif Pro', serif;
+    --fw-l: 300;
+    --fw-m: 500;
+    --fw-b: 700;
+    --fs-base: 1rem;
+
+    /* color */
+    --primary-color: #005f73;
+    --secondary-color: #0a9396;
+    --tertiary-color: rgb(49, 187, 187);
+    --background-color: #0e5aa5;
+    --accent-color-bright: #bc9624;
+    --accent-color-dark: #855b57;
+    --neutral-lt-color: #f8f9fa;
+    --neutral-mid-color: #6c757d;
+    --border-radius: 6px;
+
+    /* Nested Variable */
+    --header-bgColor: var(var(--neutral-lt-color));
+    --header-textColor: var(var(--tertiary-color));
+
+    /* helper */
+    --spacer: 1rem;
+    --spacer-dbl: calc(var(--spacer) * 2);
+    --border-radius: 6px;
+    --shadow: 0 0 6px rgba(0,0,0..3);
+}
+    /* This a html element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    /*This is a the whole of body */
+body {
+    background-color: var(--neutral-lt-color);
+    font-family: var(--primary-font);
+    font-weight: var(--fw-l);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+     /* This is a head title */
+h1 {
+    color: var(--primary-color);
+    font-family: var(--headline-font);
+}
+    /* This is a small title */
+h2 {
+
+    color: var(--accent-color-bright);
+    font-family: var(--headline-font);
+    margin-top: calc(var(--spacer) / 2);
+}
+    /* These are  for all paragrah */
+p {
+    margin-bottom: var(--spacer);
+}
+    /* TThese are  for three images */
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--neutral-lt-color);
+   /* background-color: var(var(--neutral-lt-color));
+    Color: var(--secondary-color);*/
+    padding: var(--spacer-dbl);
+}
+
+.btn {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    background-color: var(--primary-color);
+    color: var(--neutral-lt-color);
+    cursor: pointer;
+    padding: 6px 12px;
+    transition: background-color .3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--accent-color-bright);
+}
+
+section.card {
+    display: flex;
+    gap: var(--spacer);
+    width: 80%;
+    margin: var(--spacer-dbl) auto;
+}
+
+.card article {
+    border: solid 1px var(--secondary-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.card article.callout {
+    --primary-color: var(--secondary-color);
+}
+
+.card h2 {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--neutral-lt-color);
+    margin-top: 0;
+    padding: 0.25rem;
+}
+
+.card figcaption {
+    text-align: center;
+    font-size: .2rem;
+    font-style: italic;
+    padding: .25rem;
+    --primary-color: var(--secondary-color);
+}
+
+.card p {
+    padding: var(--spacer) var(--spacer); 0;
+}
+
+.card .btn {
+    display: inline-block;
+    margin: 0 0 var(--spacer) var(--spacer);
+}
+
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--neutral-lt-color);
+    text-align: center;
+    font-size: .8rem;
+    padding: 1rem 0 .25rem;
+    margin-top: auto;
+}
+
+article p::first-letter{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    display: block;
+    color: var(--primary-color);
+  }
+
+
+article p::first-line{
+    color: var(--accent-color-dark);
+    font-size: 30px;}
+
+  .Naypyidaw{
+    color: var(--secondary-color);
+    font-family: var(--headline-font); 
+  }
+
+  .Yangon{
+    color: var(--secondary-color);
+    font-family: var(--headline-font);
+  }
+  
+  .Mandalay{
+    color: var(--secondary-color);
+    font-family: var(--headline-font);
+  }
+  
+
+/* Hide the second piece of text by default */
+p.Myanmar .second {
+    display:none;
+  }
+  
+  /* Hide the first piece of text on hover */
+  p.Myanmar:hover .first {
+    display:none;
+  }
+  
+  /* Re-show the second piece of text on hover */
+  p.Myanmar:hover .second {
+   display:inline;
+  }
